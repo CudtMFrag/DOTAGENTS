@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "skills": {
+    "env-adapter": {
+      "source": "CudtMFrag/DOTAGENTS",
+      "sourceType": "github",
+      "skillPath": "UniversalSkill/env-adapter/SKILL.md",
+      "computedHash": "dfa6cb7769e49876768f8394e3583ccbbfdfa2bd6c7aaf288c1baf44dc89bc9e"
+    },
+    "project-scaffold": {
+      "source": "CudtMFrag/DOTAGENTS",
+      "sourceType": "github",
+      "skillPath": "UniversalSkill/project-scaffold/SKILL.md",
+      "computedHash": "7ed636d7332bc6e342fb5df15b8823be181f79c36f797b160130f70eef21d43e"
+    },
+    "skill-evaluator": {
+      "source": "CudtMFrag/DOTAGENTS",
+      "sourceType": "github",
+      "skillPath": "UniversalSkill/skill-evaluator/SKILL.md",
+      "computedHash": "6b1b440a29b47881f2aa9ccc21d5a1faf69bdd8cc580604ceea8136329fa42ed"
+    },
+    "tag-reductor": {
+      "source": "CudtMFrag/DOTAGENTS",
+      "sourceType": "github",
+      "skillPath": "SpecializedSkill/tag-reductor/SKILL.md",
+      "computedHash": "bf7983fe4f3e588a07686b63bb655e4ad7a836fd5a872ba9041927f40a32ba6f"
+    }
+  }
+}
