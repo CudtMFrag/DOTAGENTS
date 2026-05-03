@@ -33,7 +33,6 @@ npx skills add CudtMFrag/DOTAGENTS -a <你的agent名> -y
 
 | 技能 | 说明 |
 |---|---|
-| **cubox** | Cubox CLI 可调用的个人阅读记忆系统。支持搜索、阅读和使用已保存内容，执行语义（RAG）查询，访问文章/高亮/元数据，保存 URL，更新内容状态，检索注释和结构（文件夹和标签）。 |
 | **tag-reductor** | 归约式内容标签——从文章/书签/聊天集合中提取扁平、简短的标签，生成词云和共现关系图可视化。适用于"分析标签"、"归类标签"、"打标签"、"标签归约"等指令。 |
 
 ### 目录结构
@@ -48,9 +47,6 @@ DOTAGENTS/
 │   └── project-scaffold/
 │       └── SKILL.md
 ├── SpecializedSkill/        # 专项技能
-│   ├── cubox/
-│   │   ├── SKILL.md
-│   │   └── references/      # 参考文档
 │   └── tag-reductor/
 │       ├── SKILL.md
 │       └── scripts/         # 辅助脚本
@@ -92,7 +88,6 @@ npx skills add CudtMFrag/DOTAGENTS -a <your-agent-name> -y
 
 | Skill | Description |
 |---|---|
-| **cubox** | Callable personal reading memory system via Cubox CLI. Enables semantic (RAG-based) queries, search and retrieval of saved articles/highlights/metadata, URL saving, content state updates, and fetching annotations, folders, and tags. |
 | **tag-reductor** | Reductionist content tagging — extract flat, short tags from article/bookmark/chat collections, generate word cloud and co-occurrence graph visualizations. Ideal for taxonomy distillation from any saved content collection. |
 
 ### Directory Structure
@@ -107,9 +102,6 @@ DOTAGENTS/
 │   └── project-scaffold/
 │       └── SKILL.md
 ├── SpecializedSkill/        # Domain-specific skills
-│   ├── cubox/
-│   │   ├── SKILL.md
-│   │   └── references/      # Reference documents
 │   └── tag-reductor/
 │       ├── SKILL.md
 │       └── scripts/         # Utility scripts
