@@ -28,6 +28,7 @@ npx skills add CudtMFrag/DOTAGENTS -a <你的agent名> -y
 | **skill-evaluator** | 为特定任务寻找、比较并选择最佳 Agent 技能。处理完整评估管线：推荐门控、多源发现、表面过滤、深度验证、多维评分和跨技能兼容性分析。以上为AI生成，建议谨慎相信。 |   
 | **env-adapter** | 检测当前开发环境并适配所有操作。在任何编程任务前使用——会话开始时、打开项目时、切换机器时、命令因平台问题失败时，或用户询问环境兼容性时。 |
 | **project-scaffold** | 使用标准目录结构、配置文件和包管理器感知初始化新项目。支持多种项目类型（Node.js、Python、Go 等）。 |
+| **activity-watch** | ActivityWatch 时间追踪助手。帮助用户分类活动、分析时间使用、为 Web UI 查询编辑器编写查询，以及发现专注模式。覆盖查询语言、分类规则和常见分析场景。 |
 
 #### 🎯 SpecializedSkill（专项技能）
 
@@ -83,6 +84,7 @@ npx skills add CudtMFrag/DOTAGENTS -a <your-agent-name> -y
 | **skill-evaluator** | Find, compare, and choose the best agent skills for a specific task. Handles the full evaluation pipeline: recommendation gate, multi-source discovery, surface filtering, deep verification (install & read source), multi-dimensional scoring, and cross-skill compatibility analysis.  Above is AI shit , don't trust. |
 | **env-adapter** | Detect the current development environment and adapt all operations accordingly. Use before any coding task — at the start of every conversation, when opening a project, when switching machines, when commands fail due to platform issues, or whenever the user asks about environment compatibility. |
 | **project-scaffold** | Initialize new projects with standard directory structure, config files, and package manager awareness. Supports multiple project types (Node.js, Python, Go, etc.). |
+| **activity-watch** | ActivityWatch time tracking assistant. Help users categorize activities, analyze time usage, write queries for the Web UI query editor, and find focus patterns. Covers the query language, categorization rules, and common analysis recipes. |
 
 #### 🎯 SpecializedSkill
 
