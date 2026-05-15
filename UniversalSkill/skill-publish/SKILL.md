@@ -77,17 +77,21 @@ git push
 
 Commit messages follow Conventional Commits: `feat:`, `fix:`, `chore:`, `docs:`.
 
-## Step 4: Install globally
+## Step 4: Install to your agents
+
+**Never use `-a '*'` — it creates junk directories for agents you don't have installed.**
+
+Only install to agents you actually use. Pass each agent with its own `-a` flag:
 
 ```bash
-npx skills add CudtMFrag/DOTAGENTS -s <skill-name> -a '*' -g -y
+npx skills add CudtMFrag/DOTAGENTS -s <skill-name> -a claude-code -a codebuddy -a codex -a pi -g -y
 ```
 
-This clones from GitHub, places the canonical copy in `~\.agents\skills\<skill-name>\`, and creates symlinks to all detected agent directories.
+This clones from GitHub, places the canonical copy in `~\.agents\skills\<skill-name>\`, universal-copies to Codex, and symlinks to Claude Code, CodeBuddy, and Pi.
 
 Flags:
-- `-s <name>` — install only this skill (omit or use `'*'` for all)
-- `-a '*'` — all agents
+- `-s <name>` — install only this skill (use `'*'` for all skills in the repo)
+- `-a <agent>` — one flag per agent (repeat for multiple). Use the kebab-case name from `npx skills list -g --json`
 - `-g` — global scope (not project-scoped)
 - `-y` — skip prompts
 
