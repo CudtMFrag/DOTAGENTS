@@ -77,28 +77,44 @@ git push
 
 Commit messages follow Conventional Commits: `feat:`, `fix:`, `chore:`, `docs:`.
 
-## Step 4: Install to your agents
+## Step 4: Detect active agents and install
 
-**Never use `-a '*'` — it creates junk directories for every agent `npx skills` has ever heard of, not just the ones you actually use.**
+**Never use `-a '*'` — it creates junk directories for every agent `npx skills` has ever heard of.**
 
-First, find your real agents:
+Instead, probe the environment to find which agents are actually in use:
 
 ```bash
 npx skills list -g --json
 ```
 
-Look at the output — each skill has an `agents` array. The agents with many skills listed are the ones you actually use. Pick their names (in kebab-case), then install with one `-a` flag per agent:
+Count how many skills each agent has. Agents with only 1-2 skills are likely auto-created junk. Real agents have many skills. Filter:
 
-```bash
-npx skills add CudtMFrag/DOTAGENTS -s <skill-name> -a <agent1> -a <agent2> -g -y
+```python
+import json, subprocess
+
+result = subprocess.run(["npx", "skills", "list", "-g", "--json"], capture_output=True, text=True)
+skills = json.loads(result.stdout)
+
+agent_counts = {}
+for s in skills:
+    for a in s["agents"]:
+        agent_counts[a] = agent_counts.get(a, 0) + 1
+
+# Real agents have many skills; junk agents have only the ones we just installed
+real_agents = [a for a, c in agent_counts.items() if c > 5]
+print(" ".join(f"-a {a}" for a in sorted(real_agents)))
 ```
 
-This clones from GitHub, places the canonical copy in `~\.agents\skills\<skill-name>\`, universal-copies to the most compatible agent, and symlinks to the rest.
+Then install with the detected agents:
+
+```bash
+npx skills add CudtMFrag/DOTAGENTS -s <skill-name> <detected-agent-flags> -g -y
+```
 
 Flags:
-- `-s <name>` — install only this skill (use `'*'` for all skills in the repo)
-- `-a <agent>` — one flag per agent, repeat for multiple, use kebab-case names
-- `-g` — global scope (not project-scoped)
+- `-s <name>` — install only this skill
+- `-a <agent>` — one per agent, repeat for each, kebab-case
+- `-g` — global scope
 - `-y` — skip prompts
 
 **To update an existing skill** after pushing changes to GitHub:
