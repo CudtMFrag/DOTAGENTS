@@ -79,19 +79,25 @@ Commit messages follow Conventional Commits: `feat:`, `fix:`, `chore:`, `docs:`.
 
 ## Step 4: Install to your agents
 
-**Never use `-a '*'` — it creates junk directories for agents you don't have installed.**
+**Never use `-a '*'` — it creates junk directories for every agent `npx skills` has ever heard of, not just the ones you actually use.**
 
-Only install to agents you actually use. Pass each agent with its own `-a` flag:
+First, find your real agents:
 
 ```bash
-npx skills add CudtMFrag/DOTAGENTS -s <skill-name> -a claude-code -a codebuddy -a codex -a pi -g -y
+npx skills list -g --json
 ```
 
-This clones from GitHub, places the canonical copy in `~\.agents\skills\<skill-name>\`, universal-copies to Codex, and symlinks to Claude Code, CodeBuddy, and Pi.
+Look at the output — each skill has an `agents` array. The agents with many skills listed are the ones you actually use. Pick their names (in kebab-case), then install with one `-a` flag per agent:
+
+```bash
+npx skills add CudtMFrag/DOTAGENTS -s <skill-name> -a <agent1> -a <agent2> -g -y
+```
+
+This clones from GitHub, places the canonical copy in `~\.agents\skills\<skill-name>\`, universal-copies to the most compatible agent, and symlinks to the rest.
 
 Flags:
 - `-s <name>` — install only this skill (use `'*'` for all skills in the repo)
-- `-a <agent>` — one flag per agent (repeat for multiple). Use the kebab-case name from `npx skills list -g --json`
+- `-a <agent>` — one flag per agent, repeat for multiple, use kebab-case names
 - `-g` — global scope (not project-scoped)
 - `-y` — skip prompts
 
