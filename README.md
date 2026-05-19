@@ -48,9 +48,10 @@ npx skills add CudtMFrag/DOTAGENTS -a <your-agent-name> -y
 
 ```
 DOTAGENTS/
-├── no-autowrite/             # Pi extension
-│   ├── index.ts
-│   └── package.json
+├── extensions/               # Pi extensions
+│   └── no-autowrite/
+│       ├── index.ts
+│       └── package.json
 ├── UniversalSkill/           # General-purpose skills
 │   ├── activity-watch/
 │   │   └── SKILL.md
@@ -123,9 +124,10 @@ npx skills add CudtMFrag/DOTAGENTS -a <你的agent名> -y
 
 ```
 DOTAGENTS/
-├── no-autowrite/             # Pi 扩展
-│   ├── index.ts
-│   └── package.json
+├── extensions/               # Pi 扩展
+│   └── no-autowrite/
+│       ├── index.ts
+│       └── package.json
 ├── UniversalSkill/           # 通用技能
 │   ├── activity-watch/
 │   │   └── SKILL.md

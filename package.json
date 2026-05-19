@@ -6,7 +6,7 @@
   "type": "module",
   "pi": {
     "extensions": [
-      "./extensions/no-autowrite/index.ts"
+      "./no-autowrite/index.ts"
     ]
   }
 }
