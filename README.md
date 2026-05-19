@@ -27,7 +27,7 @@ npx skills add CudtMFrag/DOTAGENTS -a <你的agent名> -y
 |---|---|
 | **skill-evaluator** | 为特定任务寻找、比较并选择最佳 Agent 技能。处理完整评估管线：推荐门控、多源发现、表面过滤、深度验证、多维评分和跨技能兼容性分析。以上为AI生成，建议谨慎相信。 |   
 | **env-adapter** | 检测当前开发环境并适配所有操作。在任何编程任务前使用——会话开始时、打开项目时、切换机器时、命令因平台问题失败时，或用户询问环境兼容性时。 |
-| **project-scaffold** | 使用标准目录结构、配置文件和包管理器感知初始化新项目。支持多种项目类型（Node.js、Python、Go 等）。 |
+| **project-scaffold** | 使用标准目录结构、配置文件和包管理器感知初始化新项目。支持多种项目类型（Node.js、Python、静态 HTML 等）。 |
 | **activity-watch** | ActivityWatch 时间追踪助手。帮助用户分类活动、分析时间使用、为 Web UI 查询编辑器编写查询，以及发现专注模式。覆盖查询语言、分类规则和常见分析场景。 |
 | **skill-publish** | 将技能发布到 DOTAGENTS 仓库并全局安装。覆盖完整工作流：在 UniversalSkill/SpecializedSkill 中创建技能、更新 README、Git commit + push、通过 `npx skills add` 安装到所有 agent。 |
 
@@ -43,11 +43,15 @@ npx skills add CudtMFrag/DOTAGENTS -a <你的agent名> -y
 ```
 DOTAGENTS/
 ├── UniversalSkill/          # 通用技能
-│   ├── skill-evaluator/
+│   ├── activity-watch/
 │   │   └── SKILL.md
 │   ├── env-adapter/
 │   │   └── SKILL.md
-│   └── project-scaffold/
+│   ├── project-scaffold/
+│   │   └── SKILL.md
+│   ├── skill-evaluator/
+│   │   └── SKILL.md
+│   └── skill-publish/
 │       └── SKILL.md
 ├── SpecializedSkill/        # 专项技能
 │   ├── tag-reductor/
@@ -88,7 +92,7 @@ npx skills add CudtMFrag/DOTAGENTS -a <your-agent-name> -y
 |---|---|
 | **skill-evaluator** | Find, compare, and choose the best agent skills for a specific task. Handles the full evaluation pipeline: recommendation gate, multi-source discovery, surface filtering, deep verification (install & read source), multi-dimensional scoring, and cross-skill compatibility analysis.  Above is AI shit , don't trust. |
 | **env-adapter** | Detect the current development environment and adapt all operations accordingly. Use before any coding task — at the start of every conversation, when opening a project, when switching machines, when commands fail due to platform issues, or whenever the user asks about environment compatibility. |
-| **project-scaffold** | Initialize new projects with standard directory structure, config files, and package manager awareness. Supports multiple project types (Node.js, Python, Go, etc.). |
+| **project-scaffold** | Initialize new projects with standard directory structure, config files, and package manager awareness. Supports multiple project types (Node.js, Python, static HTML, etc.). |
 | **activity-watch** | ActivityWatch time tracking assistant. Help users categorize activities, analyze time usage, write queries for the Web UI query editor, and find focus patterns. Covers the query language, categorization rules, and common analysis recipes. |
 | **skill-publish** | Publish skills to the DOTAGENTS repo and install globally. Covers the full workflow: create skills in UniversalSkill/SpecializedSkill, update README, git commit + push, install via `npx skills add` to all agents. |
 
@@ -104,11 +108,15 @@ npx skills add CudtMFrag/DOTAGENTS -a <your-agent-name> -y
 ```
 DOTAGENTS/
 ├── UniversalSkill/          # General-purpose skills
-│   ├── skill-evaluator/
+│   ├── activity-watch/
 │   │   └── SKILL.md
 │   ├── env-adapter/
 │   │   └── SKILL.md
-│   └── project-scaffold/
+│   ├── project-scaffold/
+│   │   └── SKILL.md
+│   ├── skill-evaluator/
+│   │   └── SKILL.md
+│   └── skill-publish/
 │       └── SKILL.md
 ├── SpecializedSkill/        # Domain-specific skills
 │   ├── tag-reductor/
