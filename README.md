@@ -36,6 +36,7 @@ npx skills add CudtMFrag/DOTAGENTS -a <你的agent名> -y
 | 技能 | 说明 |
 |---|---|
 | **tag-reductor** | 归约式内容标签——从文章/书签/聊天集合中提取扁平、简短的标签。适用于"分析标签"、"归类标签"、"打标签"、"标签归约"等指令。 |
+| **daily-game-podcast** | 从 Folo Kite News 游戏频道拉取全部未读条目，生成中文游戏新闻播客稿，通过 xAI TTS 转为 MP3 语音，自动标记已读。 |
 
 ### 目录结构
 
@@ -49,9 +50,12 @@ DOTAGENTS/
 │   └── project-scaffold/
 │       └── SKILL.md
 ├── SpecializedSkill/        # 专项技能
-│   └── tag-reductor/
+│   ├── tag-reductor/
+│   │   ├── SKILL.md
+│   │   └── scripts/
+│   └── daily-game-podcast/
 │       ├── SKILL.md
-│       └── scripts/         # 辅助脚本
+│       └── scripts/
 └── README.md
 ```
 
@@ -93,6 +97,7 @@ npx skills add CudtMFrag/DOTAGENTS -a <your-agent-name> -y
 | Skill | Description |
 |---|---|
 | **tag-reductor** | Reductionist content tagging — extract flat, short tags from article/bookmark/chat collections, generate word cloud and co-occurrence graph visualizations. Ideal for taxonomy distillation from any saved content collection. |
+| **daily-game-podcast** | Fetch all unread from Folo Kite News Gaming feed, compose a Chinese gaming news podcast script, convert to MP3 via xAI TTS, auto-mark as read. |
 
 ### Directory Structure
 
@@ -106,9 +111,12 @@ DOTAGENTS/
 │   └── project-scaffold/
 │       └── SKILL.md
 ├── SpecializedSkill/        # Domain-specific skills
-│   └── tag-reductor/
+│   ├── tag-reductor/
+│   │   ├── SKILL.md
+│   │   └── scripts/
+│   └── daily-game-podcast/
 │       ├── SKILL.md
-│       └── scripts/         # Utility scripts
+│       └── scripts/
 └── README.md
 ```
 
