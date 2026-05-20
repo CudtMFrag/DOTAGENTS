@@ -2,11 +2,6 @@
   "name": "dotagents",
   "version": "1.0.0",
   "private": true,
-  "description": "CudtMFrag's pi extensions monorepo",
-  "type": "module",
-  "pi": {
-    "extensions": [
-      "./no-autowrite/index.ts"
-    ]
-  }
+  "description": "CudtMFrag's personal AI agent skills collection",
+  "type": "module"
 }

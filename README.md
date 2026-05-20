@@ -9,7 +9,9 @@
 
 ### What is this?
 
-`DOTAGENTS` is my collection of skills and extensions.
+`DOTAGENTS` is my collection of skills.
+
+Extensions are published as separate npm packages (e.g. `pi install npm:pi-no-autowrite`).
 
 ### Installation
 
@@ -38,20 +40,10 @@ npx skills add CudtMFrag/DOTAGENTS -a <your-agent-name> -y
 | **tag-reductor** | Reductionist content tagging — extract flat, short tags from article/bookmark/chat collections, generate word cloud and co-occurrence graph visualizations. Ideal for taxonomy distillation from any saved content collection. |
 | **daily-game-podcast** | Fetch all unread from Folo Kite News Gaming feed, compose a Chinese gaming news podcast script, convert to MP3 via xAI TTS, auto-mark as read. |
 
-### Extensions
-
-| Extension | Description |
-|---|---|
-| **no-autowrite** | Intercepts `write`/`edit` tool calls. Two modes: **education** (block + guide user to hand-write code) and **supervisor** (soft prompt to delegate heavy coding to sub-agent via `Agent` tool). Commands: `/no-autowrite`, `/no-autowrite mode <education\|supervisor>`, `/no-autowrite on\|off\|status\|show`. |
-
 ### Directory Structure
 
 ```
 DOTAGENTS/
-├── extensions/               # Pi extensions
-│   └── no-autowrite/
-│       ├── index.ts
-│       └── package.json
 ├── UniversalSkill/           # General-purpose skills
 │   ├── activity-watch/
 │   │   └── SKILL.md
@@ -85,7 +77,9 @@ This is a personal collection, but Issues and PRs for improvements are welcome.
 
 ### 这是什么？
 
-`DOTAGENTS` 是我的技能与扩展集合仓库。
+`DOTAGENTS` 是我的技能集合仓库。
+
+扩展已拆分为独立 npm 包（如 `pi install npm:pi-no-autowrite`）。
 
 ### 安装方式
 
@@ -114,20 +108,10 @@ npx skills add CudtMFrag/DOTAGENTS -a <你的agent名> -y
 | **tag-reductor** | 归约式内容标签——从文章/书签/聊天集合中提取扁平、简短的标签，生成词云与共现图。适用于标签分类体系蒸馏场景。 |
 | **daily-game-podcast** | 从 Folo Kite News 游戏频道拉取全部未读条目，生成中文游戏新闻播客稿，通过 xAI TTS 转为 MP3 语音，自动标记已读。 |
 
-### 扩展
-
-| 扩展 | 说明 |
-|---|---|
-| **no-autowrite** | 拦截 `write`/`edit` 工具调用，双模式：**education**（拦截 + 引导用户手写代码）和 **supervisor**（软提示将繁重编码委托给子 agent）。命令：`/no-autowrite`、`/no-autowrite mode <education\|supervisor>`、`/no-autowrite on\|off\|status\|show`。 |
-
 ### 目录结构
 
 ```
 DOTAGENTS/
-├── extensions/               # Pi 扩展
-│   └── no-autowrite/
-│       ├── index.ts
-│       └── package.json
 ├── UniversalSkill/           # 通用技能
 │   ├── activity-watch/
 │   │   └── SKILL.md
