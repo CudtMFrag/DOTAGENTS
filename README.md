@@ -39,6 +39,8 @@ npx skills add CudtMFrag/DOTAGENTS -a <your-agent-name> -y
 |---|---|
 | **tag-reductor** | Reductionist content tagging — extract flat, short tags from article/bookmark/chat collections, generate word cloud and co-occurrence graph visualizations. Ideal for taxonomy distillation from any saved content collection. |
 | **daily-game-podcast** | Fetch all unread from Folo Kite News Gaming feed, compose a Chinese gaming news podcast script, convert to MP3 via xAI TTS, auto-mark as read. |
+| **pi-session-namer** | Rename pi coding agent sessions with a structured Chinese convention: [完成度][任务类型][(混杂)][工作概括]. AI analyzes conversation to determine task type and summary, asks user for completion status. |
+| **daily-game-podcast** | Fetch all unread from Folo Kite News Gaming feed, compose a Chinese gaming news podcast script, convert to MP3 via xAI TTS, auto-mark as read. |
 
 ### Directory Structure
 
@@ -106,6 +108,8 @@ npx skills add CudtMFrag/DOTAGENTS -a <你的agent名> -y
 | 技能 | 说明 |
 |---|---|
 | **tag-reductor** | 归约式内容标签——从文章/书签/聊天集合中提取扁平、简短的标签，生成词云与共现图。适用于标签分类体系蒸馏场景。 |
+| **daily-game-podcast** | 从 Folo Kite News 游戏频道拉取全部未读条目，生成中文游戏新闻播客稿，通过 xAI TTS 转为 MP3 语音，自动标记已读。 |
+| **pi-session-namer** | 按结构化中文格式重命名 pi 会话：[完成度][任务类型][(混杂)][工作概括]。AI 分析对话判断任务类型与摘要，完成度向用户确认后写入。 |
 | **daily-game-podcast** | 从 Folo Kite News 游戏频道拉取全部未读条目，生成中文游戏新闻播客稿，通过 xAI TTS 转为 MP3 语音，自动标记已读。 |
 
 ### 目录结构
