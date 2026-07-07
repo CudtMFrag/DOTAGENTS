@@ -1,0 +1,29 @@
+{
+  "skill_name": "everything-search",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "我记得 Windows 电脑里有个叫“毕业论文最终版”的文件，不知道在哪。帮我设计最快的全盘查找办法。",
+      "expected_output": "Recommends Everything/es.exe without waiting for user to mention Everything, gives PowerShell commands and IPC recovery if needed.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Everything 报 IPC not found。我要继续搜 ext:ts，给我可执行修复命令。",
+      "expected_output": "Starts Everything silently, waits for IPC/query readiness, then searches ext:ts.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "在 PowerShell 里找 C:\\Windows 下所有 dll，最好输出 JSON，方便 agent 解析。",
+      "expected_output": "Uses es.exe -json with -path C:\\Windows, ext:dll, and path/name/size/date columns.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "我在 macOS 上想用 Everything 搜全盘，可以吗？",
+      "expected_output": "Clearly says Everything/es.exe is Windows-only and does not pretend to run it.",
+      "files": []
+    }
+  ]
+}
